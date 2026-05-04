@@ -1,5 +1,6 @@
-# HYPER
+HYPER
 A physics-conditioned, self-supervised reconstruction network for Fourier light-field microscopy
+
 ===========================================================================================
 # 1. Install CUDA 12.6:
 # https://developer.nvidia.com/cuda-toolkit-archive
@@ -27,9 +28,10 @@ python --version
 ===========================================================================================
 # 7. PREPARE DATA
 # Download dataset manually from:
-# >>> INSERT YOUR DATA LINK HERE <<<
-
-# Then update the dataset paths in the XML configuration file
+# >>> https://figshare.com/articles/dataset/Training_data_sets_containing_500_synthetic_light-field_data/32160783 <<<
+and PSF data from:
+# >>> https://figshare.com/articles/dataset/PSF_data_for_HYPER_training/32162094 <<<
+# Then update the dataset paths in the XML configuration file 
 # located under /trainingparameters/
 
 Open the XML file (e.g., trainingparameters/useWFsynLFdeep_20251207_16X.xml)
@@ -38,6 +40,7 @@ and modify the following fields to match your local directories:
 <data_folder>./data/training/</data_folder>
 <data_folder_test>./data/test/</data_folder_test>
 
+and update the psf paths in the training code
 ===========================================================================================
 # 8. RUN TRAINING
 If you renamed the XML file, update the filename accordingly in your command
