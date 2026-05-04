@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<test_params>
+	<data_folder type="str">I:\expdata16x\20240401</data_folder>
+	<data_folder_vol type="str">I:\expdata16x\20240401_rayrecon</data_folder_vol>
+	<lenslet_file type="str">lenslet_centers_python.txt</lenslet_file>
+	<psf_file type="str">I:\expdata16x\FLFPSF_xy768z128_px1800z3200nm_240401.mat</psf_file>
+	<!-- <psf_label type="str">F:\DLFLFM\expdata16x\idx.mat</psf_label> -->
+	<load_vols type="bool">False</load_vols> 	
+	<prefix type="str">xy1536z64_flfm16x</prefix>
+	<checkpoint type="str">./checkpoints/FLFMNet_train__20251201_170654__useWFsynLFdeep_20251201_16X_AUGxy512z64_organoid16x/model_700</checkpoint>
+
+	<images_to_use_start type="int">1</images_to_use_start>
+	<images_to_use_end type="int">50</images_to_use_end>
+	<data_scale type="list">[1,1]</data_scale>
+
+	<dark_current type="int">0</dark_current>
+
+	<output_path type="str">.\checkpoints\</output_path>
+	<writeVolsToStack type="int">1</writeVolsToStack>
+	<writeToVideo type="int">0</writeToVideo>
+	<write_to_tb type="int">0</write_to_tb>
+	<fps type="int">25</fps>
+	<video_multiplyer type="int">2</video_multiplyer>
+
+	<main_gpu type="list">[0]</main_gpu>
+	<gpu_repro type="list">[0]</gpu_repro>
+
+</test_params>
